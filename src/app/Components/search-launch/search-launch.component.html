@@ -1,0 +1,90 @@
+<form [formGroup]="filterForm" (ngSubmit)="searchByFilter(filterForm.value)">
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="id" formControlName="id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Flight id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Order">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Flight number" formControlName="flight_number">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput min="2000" placeholder="Launch date local">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="number" matInput placeholder="Rocket Id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Rocket name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Rocket type">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Core serial">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Cap serial">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Core flight">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Block">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Core reuse">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Side core1 reuse">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Side core2 reuse">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Fairings reuse">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Capsule reuse">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Site id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Site name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Site name long">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Payload id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Customer">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Payload type">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Orbit">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Launch success">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Reused">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Land success">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Landing type">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Landing vehicle">
+  </mat-form-field>
+  <button mat-button class="submit-btn" type="submit">Search</button>
+</form>
