@@ -80,6 +80,16 @@ export class ApiServiceService {
     return this.httpClient.get<CapsulesDetails>(requestEndPoint);
   }
 
+  getAllDetailsCore(): Observable<CoreDetails[]> {
+    let requestEndPoint = this.baseURL + 'parts/cores';
+    return this.httpClient.get<CoreDetails[]>(requestEndPoint);
+  }
+
+  getSingleDetailsCore(id: string): Observable<CoreDetails> {
+    let requestEndPoint = this.baseURL + 'parts/cores/' + id;
+    return this.httpClient.get<CoreDetails>(requestEndPoint);
+  }
+
   /*private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.

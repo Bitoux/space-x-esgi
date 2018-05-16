@@ -27,6 +27,9 @@ import { LaunchpadsSingleComponent } from './Components/launchpads-single/launch
 import { CapsulesDetailsComponent } from './Components/capsules-details/capsules-details.component';
 import { CapsulesDetailsSingleComponent } from './Components/capsules-details-single/capsules-details-single.component';
 import { CapsulesDetailsSearchComponent } from './Components/capsules-details-search/capsules-details-search.component';
+import { CoreDetailsComponent } from './Components/core-details/core-details.component';
+import { CoreDetailsSingleComponent } from './Components/core-details-single/core-details-single.component';
+import { CoreDetailsSearchComponent } from './Components/core-details-search/core-details-search.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { CapsulesDetailsSearchComponent } from './Components/capsules-details-se
     CapsulesSingleComponent,
     CapsulesDetailsComponent,
     CapsulesDetailsSingleComponent,
-    CapsulesDetailsSearchComponent
+    CapsulesDetailsSearchComponent,
+    CoreDetailsComponent,
+    CoreDetailsSingleComponent,
+    CoreDetailsSearchComponent
   ],
   imports: [
     BrowserModule,

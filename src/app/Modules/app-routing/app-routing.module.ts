@@ -15,6 +15,9 @@ import { LaunchpadsSingleComponent } from '../../Components/launchpads-single/la
 import { CapsulesDetailsComponent } from '../../Components/capsules-details/capsules-details.component';
 import { CapsulesDetailsSingleComponent } from '../../Components/capsules-details-single/capsules-details-single.component';
 import { CapsulesDetailsSearchComponent } from '../../Components/capsules-details-search/capsules-details-search.component';
+import { CoreDetailsComponent } from '../../Components/core-details/core-details.component';
+import { CoreDetailsSingleComponent } from '../../Components/core-details-single/core-details-single.component';
+import { CoreDetailsSearchComponent } from '../../Components/core-details-search/core-details-search.component';
 
 
 const routes: Routes = [
@@ -32,7 +35,10 @@ const routes: Routes = [
   { path: 'launchpads/:id', component: LaunchpadsSingleComponent },
   { path: 'capsules-details', component: CapsulesDetailsComponent },
   { path: 'capsules-details/search', component: CapsulesDetailsSearchComponent},
-  { path: 'capsules-details/:id', component: CapsulesDetailsSingleComponent }
+  { path: 'capsules-details/:id', component: CapsulesDetailsSingleComponent },
+  { path: 'core-details', component: CoreDetailsComponent },
+  { path: 'core-details/:id', component: CoreDetailsSingleComponent },
+  { path: 'core-details/search', component: CoreDetailsSearchComponent }
 ];
 
 @NgModule({
