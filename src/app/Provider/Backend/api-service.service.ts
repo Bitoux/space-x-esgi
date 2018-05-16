@@ -40,9 +40,9 @@ export class ApiServiceService {
     return this.httpClient.get<Launches>(requestEndPoint);
   }
 
-  getAllRockets(): Observable<Rockets> {
+  getAllRockets(): Observable<Rockets[]> {
     let requestEndPoint = this.baseURL + 'rockets';
-    return this.httpClient.get<Rockets>(requestEndPoint);
+    return this.httpClient.get<Rockets[]>(requestEndPoint);
   }
 
   getSingleRocket(id: string): Observable<Rockets> {
@@ -50,13 +50,13 @@ export class ApiServiceService {
     return this.httpClient.get<Rockets>(requestEndPoint);
   }
 
-  getAllCapsules(): Observable<Capsules> {
+  getAllCapsules(): Observable<Capsules[]> {
     let requestEndPoint = this.baseURL + 'capsules';
-    return this.httpClient.get<Capsules>(requestEndPoint);
+    return this.httpClient.get<Capsules[]>(requestEndPoint);
   }
 
   getSingleCapsules(id: string): Observable<Capsules> {
-    let requestEndPoint = this.baseURL + 'capsules/' + IDBCursorWithValue;
+    let requestEndPoint = this.baseURL + 'capsules/' + id;
     return this.httpClient.get<Capsules>(requestEndPoint);
   }
 
@@ -68,6 +68,16 @@ export class ApiServiceService {
   getSingleLaunchpads(id: string): Observable<Launchpads> {
     let requestEndPoint = this.baseURL + 'launchpads/' + id;
     return this.httpClient.get<Launchpads>(requestEndPoint);
+  }
+
+  getAllCapsulesDetails(): Observable<CapsulesDetails[]> {
+    let requestEndPoint = this.baseURL + 'parts/caps';
+    return this.httpClient.get<CapsulesDetails[]>(requestEndPoint);
+  }
+
+  getSingleCapsuleDetail(id: string): Observable<CapsulesDetails> {
+    let requestEndPoint = this.baseURL + 'parts/caps/' + id;
+    return this.httpClient.get<CapsulesDetails>(requestEndPoint);
   }
 
   /*private handleError(error: HttpErrorResponse) {

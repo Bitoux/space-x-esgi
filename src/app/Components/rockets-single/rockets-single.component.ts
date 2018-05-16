@@ -8,11 +8,19 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./rockets-single.component.css']
 })
 export class RocketsSingleComponent implements OnInit {
+  id: string;
+  rocket: Rockets;
 
   constructor(private spaceXAPI: ApiServiceService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => console.log(params));
+    this.route.params.subscribe(params => {
+      this.id = params.id;
+      this.spaceXAPI.getSingleRocket(this.id)
+        .subscribe(data => {
+          this.rocket = data;
+        });
+    });
   }
 
 }

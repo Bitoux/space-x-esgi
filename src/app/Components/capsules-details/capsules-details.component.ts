@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../../Provider/Backend/api-service.service';
 
 @Component({
   selector: 'app-capsules-details',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./capsules-details.component.css']
 })
 export class CapsulesDetailsComponent implements OnInit {
+  capsulesDetails: CapsulesDetails[];
 
-  constructor() { }
+  constructor(private spaceXAPI: ApiServiceService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.spaceXAPI.getAllCapsulesDetails()
+      .subscribe(data => {
+        this.capsulesDetails = data;
+        console.log(this.capsulesDetails);
+      })
   }
 
 }

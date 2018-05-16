@@ -4,7 +4,7 @@
   <button mat-menu-item><a href="/">Home</a></button>
   <button mat-menu-item [matMenuTriggerFor]="launches">Launches</button>
   <button mat-menu-item><a href="/rockets">Rockets</a></button>
-  <button mat-menu-item [matMenuTriggerFor]="capsuleData">Capsule Data</button>
+  <button mat-menu-item><a href="/capsules">Capsule</a></button>
   <button mat-menu-item><a href="/launchpads">Launchpad Data</a></button>
   <button mat-menu-item [matMenuTriggerFor]="detailedCapsuleData">Detailed Capsule Data</button>
   <button mat-menu-item [matMenuTriggerFor]="detailedCoreData">Detailed Core Data</button>
@@ -16,13 +16,6 @@
   <button mat-menu-item><a href="/launches/past">Past launches</a></button>
   <button mat-menu-item><a href="/launches/upcoming">Upcoming launches</a></button>
   <button mat-menu-item><a href="/launches/search">Search launches</a></button>
-</mat-menu>
-
-<mat-menu #capsuleData="matMenu">
-  <button mat-menu-item><a href="/capsules">Capsules</a></button>
-  <button mat-menu-item><a href="/capsules/dragon1">Dragon 1</a></button>
-  <button mat-menu-item><a href="/capsules/dragon2">Dragon 2</a></button>
-  <button mat-menu-item><a href="/capsules/dragoncrew">Dragon crew</a></button>
 </mat-menu>
 
 <mat-menu #detailedCapsuleData="matMenu">

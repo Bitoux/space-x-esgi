@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../../Provider/Backend/api-service.service';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-capsules-details-single',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./capsules-details-single.component.css']
 })
 export class CapsulesDetailsSingleComponent implements OnInit {
+  id: string;
+  capsuleDetail: CapsulesDetails;
 
-  constructor() { }
+  constructor(private spaceXAPI: ApiServiceService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.route.params.subscribe(params => {
+      this.id = params.id;
+      console.log(this.id);
+      this.spaceXAPI.getSingleCapsuleDetail(this.id)
+        .subscribe(data => {
+          this.capsuleDetail = data;
+          console.log(this.capsuleDetail);
+        });
+    });
   }
 
 }

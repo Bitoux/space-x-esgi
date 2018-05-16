@@ -1,3 +1,12 @@
-<p>
-  capsules-details works!
-</p>
+<h1>Capsules Details</h1>
+<mat-card *ngFor="let capsulesDetail of capsulesDetails">
+    <mat-card-header>
+        <mat-card-title>{{capsulesDetail.capsule_serial}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{capsulesDetail.details}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button><a href="/capsules-details/{{capsulesDetail.capsule_serial}}">See</a></button>
+    </mat-card-actions>
+</mat-card>

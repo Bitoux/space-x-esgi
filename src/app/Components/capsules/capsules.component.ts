@@ -7,12 +7,15 @@ import { ApiServiceService } from '../../Provider/Backend/api-service.service';
   styleUrls: ['./capsules.component.css']
 })
 export class CapsulesComponent implements OnInit {
-
+  capsules: Capsules[];
   constructor(private spaceXAPI: ApiServiceService) { }
 
   ngOnInit(): void {
     this.spaceXAPI.getAllCapsules()
-      .subscribe(data => console.log(data));
+      .subscribe(data => {
+        this.capsules = data;
+        console.log(this.capsules);
+      });
   }
 
 }
