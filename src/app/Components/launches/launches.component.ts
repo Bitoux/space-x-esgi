@@ -11,7 +11,7 @@ export class LaunchesComponent implements OnInit {
   constructor(private spaceXAPI: ApiServiceService) { }
 
   ngOnInit(): void {
-    this.spaceXAPI.getAllLaunche()
+    this.spaceXAPI.getAllLaunches()
       .subscribe(data => console.log(data));
   }
 

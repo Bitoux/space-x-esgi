@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void{
-    this.spaceXAPI.getCompanyInfos()
-      .subscribe(data => console.log((data)));
+    
   }
 }

@@ -17,7 +17,16 @@ import { PastLauncheComponent } from './Components/past-launche/past-launche.com
 import { UpcomingLauncheComponent } from './Components/upcoming-launche/upcoming-launche.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { SearchLaunchComponent } from './Components/search-launch/search-launch.component';
-import { CompanyInfoComponent } from './company-info/company-info.component';
+import { CompanyInfoComponent } from './Components/company-info/company-info.component';
+import { RocketsComponent } from './Components/rockets/rockets.component';
+import { RocketsSingleComponent } from './Components/rockets-single/rockets-single.component';
+import { CapsulesComponent } from './Components/capsules/capsules.component';
+import { CapsulesSingleComponent } from './Components/capsules-single/capsules-single.component';
+import { LaunchpadsComponent } from './Components/launchpads/launchpads.component';
+import { LaunchpadsSingleComponent } from './Components/launchpads-single/launchpads-single.component';
+import { CapsulesDetailsComponent } from './Components/capsules-details/capsules-details.component';
+import { CapsulesDetailsSingleComponent } from './Components/capsules-details-single/capsules-details-single.component';
+import { CapsulesDetailsSearchComponent } from './Components/capsules-details-search/capsules-details-search.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +37,16 @@ import { CompanyInfoComponent } from './company-info/company-info.component';
     UpcomingLauncheComponent,
     MenuComponent,
     SearchLaunchComponent,
-    CompanyInfoComponent
+    CompanyInfoComponent,
+    RocketsComponent,
+    CapsulesComponent,
+    LaunchpadsComponent,
+    LaunchpadsSingleComponent,
+    RocketsSingleComponent,
+    CapsulesSingleComponent,
+    CapsulesDetailsComponent,
+    CapsulesDetailsSingleComponent,
+    CapsulesDetailsSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,7 @@ export class ApiServiceService {
     return this.httpClient.get<Launches>(requestEndPoint);
   }
 
-  getAllLaunche(): Observable<Launches> {
+  getAllLaunches(): Observable<Launches> {
     let requestEndPoint = this.baseURL + 'launches/all';
     return this.httpClient.get<Launches>(requestEndPoint);
   }
@@ -37,39 +37,37 @@ export class ApiServiceService {
 
   searchLaunches(launcheFilter: LaunchFilter): Observable<Launches> {
     let requestEndPoint = this.baseURL + 'launches';
-    return this.httpClient.get<Launches>(requestEndPoint, {
-      id: launcheFilter.id,
-      flight_id: launcheFilter.flight_id,
-      order: launcheFilter.order,
-      flight_number: launcheFilter.flight_number,
-      launch_year: launcheFilter.launch_year,
-      launch_date_utc: launcheFilter.launch_date_utc,
-      launch_date_local: launcheFilter.launch_date_local,
-      rocket_id: launcheFilter.rocket_id,
-      rocket_name: launcheFilter.rocket_name,
-      rocket_type: launcheFilter.rocket_type,
-      core_serial: launcheFilter.core_serial,
-      cap_serial: launcheFilter.cap_serial,
-      core_flight: launcheFilter.core_flight,
-      block: launcheFilter.block,
-      core_reuse: launcheFilter.core_reuse,
-      side_core1_reuse: launcheFilter.side_core1_reuse,
-      side_core2_reuse: launcheFilter.side_core2_reuse,
-      fairings_reuse: launcheFilter.fairings_reuse,
-      capsule_reuse: launcheFilter.capsule_reuse,
-      site_id: launcheFilter.site_id,
-      site_name: launcheFilter.site_name,
-      site_name_long: launcheFilter.site_name_long,
-      payload_id: launcheFilter.payload_id,
-      customer: launcheFilter.customer,
-      payload_type: launcheFilter.payload_type,
-      orbit: launcheFilter.orbit,
-      launch_success: launcheFilter.launch_success,
-      reused: launcheFilter.reused,
-      land_success: launcheFilter.land_success,
-      landing_type: launcheFilter.landing_type,
-      landing_vehicle: launcheFilter.landing_vehicle,
-    });
+    return this.httpClient.get<Launches>(requestEndPoint);
+  }
+
+  getAllRockets(): Observable<Rockets> {
+    let requestEndPoint = this.baseURL + 'rockets';
+    return this.httpClient.get<Rockets>(requestEndPoint);
+  }
+
+  getSingleRocket(id: string): Observable<Rockets> {
+    let requestEndPoint = this.baseURL + 'rockets/' + id;
+    return this.httpClient.get<Rockets>(requestEndPoint);
+  }
+
+  getAllCapsules(): Observable<Capsules> {
+    let requestEndPoint = this.baseURL + 'capsules';
+    return this.httpClient.get<Capsules>(requestEndPoint);
+  }
+
+  getSingleCapsules(id: string): Observable<Capsules> {
+    let requestEndPoint = this.baseURL + 'capsules/' + IDBCursorWithValue;
+    return this.httpClient.get<Capsules>(requestEndPoint);
+  }
+
+  getAllLaunchpads(): Observable<Launchpads[]> {
+    let requestEndPoint = this.baseURL + 'launchpads';
+    return this.httpClient.get<Launchpads[]>(requestEndPoint);
+  }
+
+  getSingleLaunchpads(id: string): Observable<Launchpads> {
+    let requestEndPoint = this.baseURL + 'launchpads/' + id;
+    return this.httpClient.get<Launchpads>(requestEndPoint);
   }
 
   /*private handleError(error: HttpErrorResponse) {

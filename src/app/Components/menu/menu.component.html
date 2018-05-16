@@ -1,11 +1,11 @@
 <button mat-button [matMenuTriggerFor]="categories">Menu</button>
 
 <mat-menu #categories="matMenu">
+  <button mat-menu-item><a href="/">Home</a></button>
   <button mat-menu-item [matMenuTriggerFor]="launches">Launches</button>
-  <button mat-menu-item [matMenuTriggerFor]="companyData">Company Data</button>
-  <button mat-menu-item [matMenuTriggerFor]="rocketData">Rocket Data</button>
+  <button mat-menu-item><a href="/rockets">Rockets</a></button>
   <button mat-menu-item [matMenuTriggerFor]="capsuleData">Capsule Data</button>
-  <button mat-menu-item [matMenuTriggerFor]="launchpadData">Launchpad Data</button>
+  <button mat-menu-item><a href="/launchpads">Launchpad Data</a></button>
   <button mat-menu-item [matMenuTriggerFor]="detailedCapsuleData">Detailed Capsule Data</button>
   <button mat-menu-item [matMenuTriggerFor]="detailedCoreData">Detailed Core Data</button>
 </mat-menu>
@@ -18,41 +18,16 @@
   <button mat-menu-item><a href="/launches/search">Search launches</a></button>
 </mat-menu>
 
-<mat-menu #companyData="matMenu">
-  <button mat-menu-item>Insects</button>
-  <button mat-menu-item>Molluscs</button>
-  <button mat-menu-item>Crustaceans</button>
-  <button mat-menu-item>Corals</button>
-  <button mat-menu-item>Arachnids</button>
-  <button mat-menu-item>Velvet worms</button>
-  <button mat-menu-item>Horseshoe crabs</button>
-</mat-menu>
-
-<mat-menu #rocketData="matMenu">
-  <button mat-menu-item>Baikal oilfish</button>
-  <button mat-menu-item>Bala shark</button>
-  <button mat-menu-item>Ballan wrasse</button>
-  <button mat-menu-item>Bamboo shark</button>
-  <button mat-menu-item>Banded killifish</button>
-</mat-menu>
-
 <mat-menu #capsuleData="matMenu">
-  <button mat-menu-item>Sonoran desert toad</button>
-  <button mat-menu-item>Western toad</button>
-  <button mat-menu-item>Arroyo toad</button>
-  <button mat-menu-item>Yosemite toad</button>
-</mat-menu>
-
-<mat-menu #launchpadData="matMenu">
-  <button mat-menu-item>Banded Day Gecko</button>
-  <button mat-menu-item>Banded Gila Monster</button>
-  <button mat-menu-item>Black Tree Monitor</button>
-  <button mat-menu-item>Blue Spiny Lizard</button>
-  <button mat-menu-item disabled>Velociraptor</button>
+  <button mat-menu-item><a href="/capsules">Capsules</a></button>
+  <button mat-menu-item><a href="/capsules/dragon1">Dragon 1</a></button>
+  <button mat-menu-item><a href="/capsules/dragon2">Dragon 2</a></button>
+  <button mat-menu-item><a href="/capsules/dragoncrew">Dragon crew</a></button>
 </mat-menu>
 
 <mat-menu #detailedCapsuleData="matMenu">
-  <button mat-menu-item></button>
+  <button mat-menu-item><a href="/capsules-details">Detailed capsule</a></button>
+  <button mat-menu-item><a href="/capsules-details/search">Search detailed capsule</a></button>
 </mat-menu>
 
 <mat-menu #detailedCoreData="matMenu">
