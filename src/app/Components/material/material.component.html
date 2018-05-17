@@ -1,0 +1,16 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <mat-button-toggle-group #group="matButtonToggleGroup" (change)="test()" value="rocket" style="left:50%;transform:translateX(-50%);">
+        <mat-button-toggle value="rocket">Rockets</mat-button-toggle>
+        <mat-button-toggle value="capsule">Capsules</mat-button-toggle>
+        <mat-button-toggle value="launchpad">Launchpads</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div class="row">
+      <app-rockets *ngIf="group.value === 'rocket'"></app-rockets>
+      <app-capsules *ngIf="group.value === 'capsule'"></app-capsules>
+      <app-launchpads *ngIf="group.value === 'launchpad'"></app-launchpads>
+    </div>
+  </div>
+</div>
