@@ -16,30 +16,31 @@ import {MatRadioModule} from '@angular/material/radio';
 
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import {AppRoutingModule} from './Modules/app-routing/app-routing.module';
-import {LaunchesComponent} from './Components/launches/launches.component';
-import {LastestLauncheComponent} from './Components/lastest-launche/lastest-launche.component';
-import {UpcomingLauncheComponent} from './Components/upcoming-launche/upcoming-launche.component';
-import {MenuComponent} from './Components/menu/menu.component';
-import {SearchLaunchComponent} from './Components/search-launch/search-launch.component';
-import {CompanyInfoComponent} from './Components/company-info/company-info.component';
-import {RocketsComponent} from './Components/material/rockets/rockets.component';
-import {RocketsSingleComponent} from './Components/rockets-single/rockets-single.component';
-import {CapsulesComponent} from './Components/material/capsules/capsules.component';
-import {CapsulesSingleComponent} from './Components/capsules-single/capsules-single.component';
-import {FooterComponent} from './Components/footer/footer.component';
-import {SidebarComponent} from './Components/sidebar/sidebar.component';
-import {NavbarComponent} from './Components/navbar/navbar.component';
-import {LaunchpadsComponent} from './Components/material/launchpads/launchpads.component';
-import {LaunchpadsSingleComponent} from './Components/launchpads-single/launchpads-single.component';
-import {CapsulesDetailsComponent} from './Components/capsules-details/capsules-details.component';
-import {CapsulesDetailsSingleComponent} from './Components/capsules-details-single/capsules-details-single.component';
-import {CapsulesDetailsSearchComponent} from './Components/capsules-details-search/capsules-details-search.component';
-import {CoreDetailsComponent} from './Components/core-details/core-details.component';
-import {CoreDetailsSingleComponent} from './Components/core-details-single/core-details-single.component';
-import {CoreDetailsSearchComponent} from './Components/core-details-search/core-details-search.component';
-import {MaterialComponent} from './Components/material/material.component';
+import {AppRoutingModule} from './app-routing.module';
+import {LaunchesComponent} from './pages/launches/launches.component';
+import {LastestLauncheComponent} from './pages/launches/lastest-launche/lastest-launche.component';
+import {UpcomingLauncheComponent} from './pages/launches/upcoming-launche/upcoming-launche.component';
+import {MenuComponent} from './components/menu/menu.component';
+import {SearchLaunchComponent} from './components/search-launch/search-launch.component';
+import {CompanyInfoComponent} from './pages/company-info/company-info.component';
+import {RocketsComponent} from './pages/equipments/rockets/rockets.component';
+import {RocketsSingleComponent} from './pages/equipments/rockets/rockets-single/rockets-single.component';
+import {CapsulesComponent} from './pages/equipments/capsules/capsules.component';
+import {CapsulesSingleComponent} from './pages/equipments/capsules/capsules-single/capsules-single.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {LaunchpadsComponent} from './pages/equipments/launchpads/launchpads.component';
+import {LaunchpadsSingleComponent} from './pages/equipments/launchpads/launchpads-single/launchpads-single.component';
+import {CapsulesDetailsComponent} from './pages/capsules-details/capsules-details.component';
+import {CapsulesDetailsSingleComponent} from './pages/capsules-details/capsules-details-single/capsules-details-single.component';
+import {CapsulesDetailsSearchComponent} from './components/capsules-details-search/capsules-details-search.component';
+import {CoreDetailsComponent} from './pages/core-details/core-details.component';
+import {CoreDetailsSingleComponent} from './pages/core-details/core-details-single/core-details-single.component';
+import {CoreDetailsSearchComponent} from './components/core-details-search/core-details-search.component';
+import {MaterialComponent} from './pages/equipments/material.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {RoutingState} from './shared/provider/route-history.provider';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatRadioModule,
     MatButtonToggleModule
   ],
-  providers: [],
+  providers: [RoutingState],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

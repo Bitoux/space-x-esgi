@@ -1,0 +1,20 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let launchpad of launchpads">
+        <div class="card card-profile" style="height: calc(100% - 60px);">
+          <div class="card-avatar">
+            <img class="img" src="assets/img/launchpad.jpg"/>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{launchpad.full_name}}</h4>
+            <p class="card-description">
+              {{launchpad.details}}
+            </p>
+            <a href class="btn btn-danger btn-round"  [routerLink]="['/launchpads', launchpad.id]">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
