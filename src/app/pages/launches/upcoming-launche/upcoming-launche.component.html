@@ -1,3 +1,56 @@
-<p>
-  upcoming-launche works!
-</p>
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Simple Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Flight number
+                                  </th>
+                                  <th>
+                                    Rocket name
+                                  </th>
+                                  <th>
+                                      Mission name
+                                  </th>
+                                  <th>
+                                      Launch year
+                                  </th>
+                                  <th>
+                                      
+                                  </th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let launche of launches">
+                                      <td>
+                                          {{launche.flight_number}}
+                                      </td>
+                                      <td>
+                                          {{launche.rocket.rocket_name}}
+                                      </td>
+                                      <td>
+                                          {{launche.mission_name}}
+                                      </td>
+                                      <td>
+                                          {{launche.launch_year}}
+                                      </td>
+                                      <td class="text-primary">
+                                        <a href class="btn btn-danger btn-round" [routerLink]="['/launches', launche.flight_number]">{{launche.flight_number}}Details</a>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

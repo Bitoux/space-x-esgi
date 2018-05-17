@@ -6,12 +6,13 @@ import { ApiServiceService } from '../../../shared/provider/Backend/api-service.
   styleUrls: ['./lastest-launche.component.css']
 })
 export class LastestLauncheComponent implements OnInit {
+  launches: Launches[];
 
   constructor(private spaceXAPI: ApiServiceService) { }
 
   ngOnInit(): void {
     this.spaceXAPI.getLastLaunche()
-      .subscribe(data => console.log(data));
+      .subscribe(data => this.launches = data);
   }
 
 }

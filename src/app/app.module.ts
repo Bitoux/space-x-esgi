@@ -41,6 +41,7 @@ import {CoreDetailsSearchComponent} from './components/core-details-search/core-
 import {MaterialComponent} from './pages/equipments/material.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {RoutingState} from './shared/provider/route-history.provider';
+import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import {RoutingState} from './shared/provider/route-history.provider';
     CoreDetailsComponent,
     CoreDetailsSingleComponent,
     CoreDetailsSearchComponent,
-    MaterialComponent
+    MaterialComponent,
+    LauncheSingleComponent
   ],
   imports: [
     BrowserModule,
