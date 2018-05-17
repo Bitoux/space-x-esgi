@@ -1,9 +1,12 @@
 <button mat-button [matMenuTriggerFor]="categories">Menu</button>
 
+
+<app-sidebar></app-sidebar>
+
 <mat-menu #categories="matMenu">
-  <button mat-menu-item><a href="/">Home</a></button>
+  <a mat-menu-item [routerLink]="['/']" routerLinkActive="active">Home</a>
   <button mat-menu-item [matMenuTriggerFor]="launches">Launches</button>
-  <button mat-menu-item><a href="/rockets">Rockets</a></button>
+  <a mat-menu-item [routerLink]="['/rockets']">Rockets</a>
   <button mat-menu-item><a href="/capsules">Capsule</a></button>
   <button mat-menu-item><a href="/launchpads">Launchpad Data</a></button>
   <button mat-menu-item [matMenuTriggerFor]="detailedCapsuleData">Detailed Capsule Data</button>

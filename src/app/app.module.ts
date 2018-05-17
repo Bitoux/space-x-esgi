@@ -23,6 +23,9 @@ import { RocketsComponent } from './Components/rockets/rockets.component';
 import { RocketsSingleComponent } from './Components/rockets-single/rockets-single.component';
 import { CapsulesComponent } from './Components/capsules/capsules.component';
 import { CapsulesSingleComponent } from './Components/capsules-single/capsules-single.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { SidebarComponent } from './Components/sidebar/sidebar.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 import { LaunchpadsComponent } from './Components/launchpads/launchpads.component';
 import { LaunchpadsSingleComponent } from './Components/launchpads-single/launchpads-single.component';
 import { CapsulesDetailsComponent } from './Components/capsules-details/capsules-details.component';
@@ -50,6 +53,9 @@ import { CoreDetailsSearchComponent } from './Components/core-details-search/cor
     CapsulesSingleComponent,
     CapsulesDetailsComponent,
     CapsulesDetailsSingleComponent,
+    FooterComponent,
+    SidebarComponent,
+    NavbarComponent
     CapsulesDetailsSearchComponent,
     CoreDetailsComponent,
     CoreDetailsSingleComponent,
