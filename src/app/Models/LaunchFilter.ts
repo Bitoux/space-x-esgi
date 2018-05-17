@@ -1,5 +1,5 @@
 interface LaunchFilter {
-    id: string;
+    id: boolean;
     flight_id: string;
     order: string;
     flight_number: string;

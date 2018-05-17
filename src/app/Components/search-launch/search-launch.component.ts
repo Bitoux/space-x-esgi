@@ -10,11 +10,10 @@ import { ApiServiceService } from '../../Provider/Backend/api-service.service';
 export class SearchLaunchComponent implements OnInit {
   filterForm: FormGroup;
   launcheFilter: LaunchFilter;
-  id: string;
 
   constructor(private formBuilder: FormBuilder, private spaceXAPI: ApiServiceService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.filterForm = new FormGroup({
       id: new FormControl(),
       flight_id: new FormControl(),

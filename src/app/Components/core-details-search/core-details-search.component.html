@@ -1,3 +1,30 @@
-<p>
-  core-details-search works!
-</p>
+<form [formGroup]="filterForm" (ngSubmit)="searchByFilter(filterForm.value)">
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Core serial" formControlName="core_serial">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Block" formControlName="block">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Status" formControlName="status">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Missions" formControlName="missions">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="RTLS Attemps" formControlName="rtls_attempt">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Rtls landings" formControlName="rtls_landings">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Asds attemps" formControlName="asds_attempt">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Water landings" formControlName="water_landing">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Core serial" formControlName="core_serial">
+  </mat-form-field>
+  <button mat-button class="submit-btn" type="submit">Search</button>
+</form>

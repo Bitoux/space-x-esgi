@@ -36,7 +36,8 @@ export class ApiServiceService {
   }
 
   searchLaunches(launcheFilter: LaunchFilter): Observable<Launches> {
-    let requestEndPoint = this.baseURL + 'launches';
+    let params = this.launchFilterOptionToGetParam(launcheFilter);
+    let requestEndPoint = this.baseURL + 'launches?' + params;
     return this.httpClient.get<Launches>(requestEndPoint);
   }
 
@@ -88,6 +89,102 @@ export class ApiServiceService {
   getSingleDetailsCore(id: string): Observable<CoreDetails> {
     let requestEndPoint = this.baseURL + 'parts/cores/' + id;
     return this.httpClient.get<CoreDetails>(requestEndPoint);
+  }
+
+
+  private launchFilterOptionToGetParam(filterOption: LaunchFilter): string {
+    let getParams = '';
+    if(filterOption.flight_id !== null){
+      getParams = getParams + 'flight_id='+filterOption.flight_id;
+    }
+    if(filterOption.order !== null ){
+      getParams = getParams + '&order='+filterOption.order;
+    }
+    if(filterOption.flight_number !== null){
+      getParams = getParams + '&flight_number='+filterOption.flight_number;
+    }
+    if(filterOption.launch_year !== null) {
+      getParams = getParams + '&launch_year='+filterOption.launch_year;
+    }
+    if(filterOption.launch_date_utc !== null) {
+      getParams = getParams + '&launch_date_utc='+filterOption.launch_date_utc;
+    }
+    if(filterOption.launch_date_local !== null) {
+      getParams = getParams + '&launch_date_local='+filterOption.launch_date_local;
+    }
+    if(filterOption.rocket_id !== null) {
+      getParams = getParams + '&rocket_id='+filterOption.rocket_id;
+    }
+    if(filterOption.rocket_name !== null) {
+      getParams = getParams + '&rocket_name='+filterOption.rocket_name;
+    }
+    if(filterOption.rocket_type !== null) {
+      getParams = getParams + '&rocket_type='+filterOption.rocket_type;
+    }
+    if(filterOption.core_serial !== null) {
+      getParams = getParams + '&core_serial='+filterOption.core_serial;
+    }
+    if(filterOption.cap_serial !== null) {
+      getParams = getParams + '&cap_serial='+filterOption.cap_serial;
+    }
+    if(filterOption.core_flight !== null) {
+      getParams = getParams + '&core_flight='+filterOption.core_flight;
+    }
+    if(filterOption.block !== null) {
+      getParams = getParams + '&block='+filterOption.block;
+    }
+    if(filterOption.core_reuse !== null) {
+      getParams = getParams + '&core_reuse='+filterOption.core_reuse;
+    }
+    if(filterOption.side_core1_reuse !== null) {
+      getParams = getParams + '&side_core1_reuse='+filterOption.side_core1_reuse;
+    }
+    if(filterOption.side_core2_reuse !== null) {
+      getParams = getParams + '&side_core2_reuse='+filterOption.side_core2_reuse;
+    }
+    if(filterOption.fairings_reuse !== null) {
+      getParams = getParams + '&fairings_reuse='+filterOption.fairings_reuse;
+    }
+    if(filterOption.capsule_reuse !== null) {
+      getParams = getParams + '&capsule_reuse='+filterOption.capsule_reuse;
+    }
+    if(filterOption.site_id !== null) {
+      getParams = getParams + '&site_id='+filterOption.site_id;
+    }
+    if(filterOption.site_name !== null) {
+      getParams = getParams + '&site_name='+filterOption.site_name;
+    }
+    if(filterOption.site_name_long !== null) {
+      getParams = getParams + '&site_name_long='+filterOption.site_name_long;
+    }
+    if(filterOption.payload_id !== null) {
+      getParams = getParams + '&payload_id='+filterOption.payload_id;
+    }
+    if(filterOption.customer !== null) {
+      getParams = getParams + '&customer='+filterOption.customer;
+    }
+    if(filterOption.payload_type !== null) {
+      getParams = getParams + '&payload_type='+filterOption.payload_type;
+    }
+    if(filterOption.orbit !== null) {
+      getParams = getParams + '&orbit='+filterOption.orbit;
+    }
+    if(filterOption.launch_success !== null) {
+      getParams = getParams + '&launch_success='+filterOption.launch_success;
+    }
+    if(filterOption.reused !== null) {
+      getParams = getParams + '&reused='+filterOption.reused;
+    }
+    if(filterOption.land_success !== null) {
+      getParams = getParams + '&land_success='+filterOption.land_success;
+    }
+    if(filterOption.landing_type !== null) {
+      getParams = getParams + '&landing_type='+filterOption.landing_type;
+    }
+    if(filterOption.landing_vehicle !== null) {
+      getParams = getParams + '&landing_vehicle='+filterOption.landing_vehicle;
+    }
+    return getParams;
   }
 
   /*private handleError(error: HttpErrorResponse) {
