@@ -15,13 +15,14 @@ export class ApiServiceService {
     return this.httpClient.get<Company>(requestEndPoint);
   }
 
-  getLastLaunche(): Observable<Launches> {
-    let requestEndPoint = this.baseURL + 'launches/latest';
-    return this.httpClient.get<Launches>(requestEndPoint);
+  getLastLaunche(): Observable<Launches[]> {
+    let requestEndPoint = this.baseURL + 'launches';
+    return this.httpClient.get<Launches[]>(requestEndPoint);
   }
 
-  getAllLaunches(): Observable<Launches> {
-    let requestEndPoint = this.baseURL + 'launches/all';
+  getLauncheByFlightNumber(id: string): Observable<Launches> {
+    let requestEndPoint = this.baseURL + 'launches?flight_number=' + id;
+    console.log(requestEndPoint);
     return this.httpClient.get<Launches>(requestEndPoint);
   }
 
@@ -30,9 +31,9 @@ export class ApiServiceService {
     return this.httpClient.get<Launches>(requestEndPoint);
   }
 
-  getUpcomingLauches(): Observable<Launches> {
+  getUpcomingLauches(): Observable<Launches[]> {
     let requestEndPoint = this.baseURL + 'launches/upcoming';
-    return this.httpClient.get<Launches>(requestEndPoint);
+    return this.httpClient.get<Launches[]>(requestEndPoint);
   }
 
   searchLaunches(launcheFilter: LaunchFilter): Observable<Launches> {

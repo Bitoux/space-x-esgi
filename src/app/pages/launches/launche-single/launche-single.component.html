@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="card">
+      <div class="card-header card-header-danger">
+          <h4 class="card-title">{{launche?.mission_name}}</h4>
+          <p class="card-category">Flight number: {{launche?.flight_number}}</p>
+      </div>
+      <div class="card-body">
+          <div id="typography">
+              <div class="card-title">
+                <div class="flex-container">
+                  <div class="flex-content" style="display: inline-block; vertical-align: top;">
+                    <img src="{{launche?.links.mission_patch_small}}" alt="Patch mission" />
+                  </div>
+                  <div class="flex-content tim-typo" style="display: inline-block; margin-left: 20px; margin-top: 20px; vertical-align: top;">
+                      <p><span>Launche date:</span> {{launche?.launch_date_local}}</p>
+                      <p><span>Launche site:</span> {{launche?.launch_site.site_name_long}}</p>
+                      <p><span>Rocket:</span> {{launche?.rocket.rocket_name}}</p>
+                      <p><span>Details:</span> {{launche?.details}}</p>
+                  </div>
+                </div>
+                <div class="card-footer" style="margin-top: 20px;">
+                  <p><a class="btn btn-danger btn-round" href="{{launche?.links.video_link}}" target="_blank">Video <i class="material-icons">slow_motion_video</i></a></p>
+                  <p><a class="btn btn-danger btn-round" href="{{launche?.links.article_link}}" target="_blank">Read more <i class="material-icons">assignment</i></a></p>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
