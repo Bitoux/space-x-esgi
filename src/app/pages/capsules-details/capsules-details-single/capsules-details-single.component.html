@@ -1,3 +1,22 @@
-<p>
-  capsules-details-single works!
-</p>
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title">{{capsuleDetail?.type}}</h4>
+            <p class="card-category">{{capsuleDetail?.original_launch}}</p>
+        </div>
+        <div class="card-body">
+            <div id="typography">
+                <div class="card-title">
+                  <div class="flex-container">
+                    <div class="flex-content tim-typo" >
+                        <p><span>Landings:</span> {{capsuleDetail?.landings}}</p>
+                        <p><span>Capsule serial:</span> {{capsuleDetail?.capsule_serial}}</p>
+                        <p><span>Details:</span> {{capsuleDetail?.details}}</p>
+                        <p><span>Status:</span> {{capsuleDetail?.status}}</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

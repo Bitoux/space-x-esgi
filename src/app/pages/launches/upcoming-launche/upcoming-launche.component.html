@@ -4,8 +4,8 @@
           <div class="col-md-12">
               <div class="card">
                   <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Simple Table</h4>
-                      <p class="card-category"> Here is a subtitle for this table</p>
+                      <h4 class="card-title ">Launches</h4>
+                      <p class="card-category">Upcoming launches</p>
                   </div>
                   <div class="card-body">
                       <div class="table-responsive">
@@ -23,9 +23,6 @@
                                   <th>
                                       Launch year
                                   </th>
-                                  <th>
-                                      
-                                  </th>
                               </thead>
                               <tbody>
                                   <tr *ngFor="let launche of launches">
@@ -40,9 +37,6 @@
                                       </td>
                                       <td>
                                           {{launche.launch_year}}
-                                      </td>
-                                      <td class="text-primary">
-                                        <a href class="btn btn-danger btn-round" [routerLink]="['/launches', launche.flight_number]">{{launche.flight_number}}Details</a>
                                       </td>
                                   </tr>
                               </tbody>

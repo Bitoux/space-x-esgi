@@ -1,12 +1,51 @@
-<h1>Core details</h1>
-<mat-card *ngFor="let coreDetail of coreDetails">
-    <mat-card-header>
-        <mat-card-title>{{coreDetail.core_serial}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{coreDetail.details}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button><a href="/core-details/{{coreDetail.core_serial}}">See</a></button>
-    </mat-card-actions>
-</mat-card>
+<div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title ">Core details</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                        <th>
+                                            Core serial
+                                        </th>
+                                        <th>
+                                            Original launch
+                                        </th>
+                                        <th>
+                                            Status
+                                        </th>
+                                        <th>
+                                            
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let coreDetail of coreDetails">
+                                            <td>
+                                                {{coreDetail?.core_serial}}
+                                            </td>
+                                            
+                                            <td>
+                                                {{coreDetail?.original_launch}}
+                                            </td>
+                                            <td>
+                                                {{coreDetail?.status}}
+                                            </td>
+                                            <td class="text-primary">
+                                              <a href class="btn btn-danger btn-round" [routerLink]="['/core-details', coreDetail.core_serial]" >Details</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      

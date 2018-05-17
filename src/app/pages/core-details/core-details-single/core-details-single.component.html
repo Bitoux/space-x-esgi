@@ -1,3 +1,22 @@
-<p>
-  core-details-single works!
-</p>
+<div class="container-fluid">
+    <div class="card">
+        <div class="card-header card-header-danger">
+            <h4 class="card-title">{{coreDetail?.core_serial}}</h4>
+            <p class="card-category">{{coreDetail?.original_launch}}</p>
+        </div>
+        <div class="card-body">
+            <div id="typography">
+                <div class="card-title">
+                  <div class="flex-container">
+                    <div class="flex-content tim-typo" >
+                        <p><span>Landings:</span> {{coreDetail?.rtls_landings}}</p>
+                        <p><span>Capsule serial:</span> {{coreDetail?.core_serial}}</p>
+                        <p><span>Details:</span> {{coreDetail?.details}}</p>
+                        <p><span>Status:</span> {{coreDetail?.status}}</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

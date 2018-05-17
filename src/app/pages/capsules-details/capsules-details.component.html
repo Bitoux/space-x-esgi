@@ -1,12 +1,56 @@
-<h1>Capsules Details</h1>
-<mat-card *ngFor="let capsulesDetail of capsulesDetails">
-    <mat-card-header>
-        <mat-card-title>{{capsulesDetail.capsule_serial}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{capsulesDetail.details}}</p>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button><a href="/capsules-details/{{capsulesDetail.capsule_serial}}">See</a></button>
-    </mat-card-actions>
-</mat-card>
+<div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title ">Capsules details</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+                                        <th>
+                                            Capsule id
+                                        </th>
+                                        <th>
+                                            Capsule serial
+                                        </th>
+                                        <th>
+                                            Capsule type
+                                        </th>
+                                        <th>
+                                            Original launch
+                                        </th>
+                                        <th>
+                                            
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let capsulesDetail of capsulesDetails">
+                                            <td>
+                                                {{capsulesDetail?.capsule_id}}
+                                            </td>
+                                            <td>
+                                                {{capsulesDetail.capsule_serial}}
+                                            </td>
+                                            <td>
+                                                {{capsulesDetail?.type}}
+                                            </td>
+                                            <td>
+                                                {{capsulesDetail?.original_launch}}
+                                            </td>
+                                            <td class="text-primary">
+                                              <a href class="btn btn-danger btn-round" [routerLink]="['/capsules-details', capsulesDetail.capsule_serial]" >Details</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      

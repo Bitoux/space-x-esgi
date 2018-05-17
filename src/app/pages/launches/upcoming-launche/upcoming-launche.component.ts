@@ -13,7 +13,10 @@ export class UpcomingLauncheComponent implements OnInit {
 
   ngOnInit(): void {
     this.spaceXAPI.getUpcomingLauches()
-      .subscribe(data => this.launches = data);
+      .subscribe(data => {
+        this.launches = data;
+        console.log(this.launches);
+      });
   }
 
 }
