@@ -7,12 +7,13 @@ import { ApiServiceService } from '../../../shared/provider/Backend/api-service.
   styleUrls: ['./upcoming-launche.component.css']
 })
 export class UpcomingLauncheComponent implements OnInit {
+  launches: Launches[];
 
   constructor(private spaceXAPI: ApiServiceService) { }
 
   ngOnInit(): void {
     this.spaceXAPI.getUpcomingLauches()
-      .subscribe(data => console.log(data));
+      .subscribe(data => this.launches = data);
   }
 
 }

@@ -34,6 +34,9 @@ import {RoutingState} from './shared/provider/route-history.provider';
 import {EquipementsModule} from './pages/equipements/equipements.module';
 import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
 
+import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +53,9 @@ import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
     CoreDetailsComponent,
     CoreDetailsSingleComponent,
     CoreDetailsSearchComponent
+    CoreDetailsSearchComponent,
+    MaterialComponent,
+    LauncheSingleComponent
   ],
   imports: [
     BrowserModule,
