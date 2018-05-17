@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="row">
+    <mat-button-toggle-group #group="matButtonToggleGroup" value="rocket" style="margin-top:15px;left:50%;transform:translateX(-50%);">
+      <mat-button-toggle value="rocket" [routerLink]="['rockets']">Rockets</mat-button-toggle>
+      <mat-button-toggle value="capsule" [routerLink]="['capsules']">Capsules</mat-button-toggle>
+      <mat-button-toggle value="launchpad" [routerLink]="['launchpads']">Launchpads</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>

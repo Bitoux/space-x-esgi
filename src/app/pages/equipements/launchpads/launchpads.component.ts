@@ -8,6 +8,7 @@ import { ApiServiceService } from '../../../shared/provider/Backend/api-service.
 })
 export class LaunchpadsComponent implements OnInit {
   launchpads: Launchpads[];
+  searchText: string = '';
 
   constructor(private spaceXAPI: ApiServiceService) { }
 

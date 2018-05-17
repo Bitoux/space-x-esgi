@@ -8,6 +8,8 @@ import { ApiServiceService } from '../../../shared/provider/Backend/api-service.
 })
 export class CapsulesComponent implements OnInit {
   capsules: Capsules[];
+  searchText: string = '';
+
   constructor(private spaceXAPI: ApiServiceService) { }
 
   ngOnInit(): void {
