@@ -19,14 +19,14 @@ import { UpcomingLauncheComponent } from './Components/upcoming-launche/upcoming
 import { MenuComponent } from './Components/menu/menu.component';
 import { SearchLaunchComponent } from './Components/search-launch/search-launch.component';
 import { CompanyInfoComponent } from './Components/company-info/company-info.component';
-import { RocketsComponent } from './Components/rockets/rockets.component';
+import { RocketsComponent } from './Components/material/rockets/rockets.component';
 import { RocketsSingleComponent } from './Components/rockets-single/rockets-single.component';
-import { CapsulesComponent } from './Components/capsules/capsules.component';
+import { CapsulesComponent } from './Components/material/capsules/capsules.component';
 import { CapsulesSingleComponent } from './Components/capsules-single/capsules-single.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { SidebarComponent } from './Components/sidebar/sidebar.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
-import { LaunchpadsComponent } from './Components/launchpads/launchpads.component';
+import { LaunchpadsComponent } from './Components/material/launchpads/launchpads.component';
 import { LaunchpadsSingleComponent } from './Components/launchpads-single/launchpads-single.component';
 import { CapsulesDetailsComponent } from './Components/capsules-details/capsules-details.component';
 import { CapsulesDetailsSingleComponent } from './Components/capsules-details-single/capsules-details-single.component';
@@ -34,6 +34,8 @@ import { CapsulesDetailsSearchComponent } from './Components/capsules-details-se
 import { CoreDetailsComponent } from './Components/core-details/core-details.component';
 import { CoreDetailsSingleComponent } from './Components/core-details-single/core-details-single.component';
 import { CoreDetailsSearchComponent } from './Components/core-details-search/core-details-search.component';
+import { MaterialComponent } from './Components/material/material.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { CoreDetailsSearchComponent } from './Components/core-details-search/cor
     CapsulesDetailsSearchComponent,
     CoreDetailsComponent,
     CoreDetailsSingleComponent,
-    CoreDetailsSearchComponent
+    CoreDetailsSearchComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +79,8 @@ import { CoreDetailsSearchComponent } from './Components/core-details-search/cor
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatRadioModule
+    MatRadioModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
