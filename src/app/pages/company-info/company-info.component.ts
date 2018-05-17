@@ -7,12 +7,16 @@ import { ApiServiceService } from '../../shared/provider/Backend/api-service.ser
   styleUrls: ['./company-info.component.css']
 })
 export class CompanyInfoComponent implements OnInit {
+  info: any;
 
   constructor(private spaceXAPI: ApiServiceService) { }
 
   ngOnInit(): void {
     this.spaceXAPI.getCompanyInfos()
-      .subscribe(data => console.log(data));
+      .subscribe(data => {
+        console.log(data);
+        this.info = data;
+      });
   }
 
 }

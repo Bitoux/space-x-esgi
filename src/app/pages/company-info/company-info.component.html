@@ -1,3 +1,58 @@
-<p>
-  company-info works!
-</p>
+<div class="container-fluid">
+  <div class="row" style="margin: 30px 0 70px 0">
+    <div class="col-md-12 text-center">
+      <img class="img" src="assets/img/SpaceX-logo.png" style="width: 80%;margin-left: 65px;"/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card card-profile">
+        <div class="card-body">
+          <h6 class="card-category text-gray">CEO / CTO / Founder</h6>
+          <h4 class="card-title">{{info?.ceo}}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-profile">
+        <div class="card-body">
+          <h6 class="card-category text-gray">COO</h6>
+          <h4 class="card-title">{{info?.coo}}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card card-profile">
+        <div class="card-body">
+          <h6 class="card-category text-gray">CTO Propulsion</h6>
+          <h4 class="card-title">{{info?.cto_propulsion}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-profile">
+        <div class="card-body" style="font-size: 16px;">
+          {{info?.summary}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <div class="card card-profile">
+        <div class="card-body" style="font-size: 30px;">
+          {{info?.valuation}} €
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card card-profile">
+        <div class="card-body" style="font-size: 36px;">
+          {{info?.founded}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

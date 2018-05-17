@@ -31,9 +31,8 @@ import {CoreDetailsSingleComponent} from './pages/core-details/core-details-sing
 import {CoreDetailsSearchComponent} from './components/core-details-search/core-details-search.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {RoutingState} from './shared/provider/route-history.provider';
-
-import {EquipementsModule} from "./pages/equipements/equipements.module";
-import {NgHttpLoaderModule} from "ng-http-loader/ng-http-loader.module";
+import {EquipementsModule} from './pages/equipements/equipements.module';
+import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
 
 import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
 
