@@ -1,28 +1,34 @@
 <form [formGroup]="filterForm" (ngSubmit)="searchByFilter(filterForm.value)">
+  
   <mat-form-field class="example-full-width">
-    <input type="number" matInput placeholder="id" formControlName="id">
+    <input type="number" matInput placeholder="Flight id" formControlName="flight_id">
   </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input type="number" matInput placeholder="Flight id">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input type="text" matInput placeholder="Order">
-  </mat-form-field>
+  
+  <mat-radio-group matInput formControlName="order">
+      <mat-radio-button value="asc">ASC</mat-radio-button>
+      <mat-radio-button value="desc">DESC</mat-radio-button>
+  </mat-radio-group>
+  
   <mat-form-field class="example-full-width">
     <input type="number" matInput placeholder="Flight number" formControlName="flight_number">
   </mat-form-field>
+
   <mat-form-field class="example-full-width">
-    <input type="number" matInput min="2000" placeholder="Launch date local">
+    <input type="number" matInput min="2000" max="2040" placeholder="Launch year" formControlName="launch_year">
   </mat-form-field>
+
   <mat-form-field class="example-full-width">
-    <input type="number" matInput placeholder="Rocket Id">
+    <input type="number" matInput placeholder="Rocket Id" formControlName="rocket_id">
   </mat-form-field>
+
   <mat-form-field class="example-full-width">
-    <input type="text" matInput placeholder="Rocket name">
+    <input type="text" matInput placeholder="Rocket name" formControlName="rocket_name">
   </mat-form-field>
+
   <mat-form-field class="example-full-width">
-    <input type="text" matInput placeholder="Rocket type">
+    <input type="text" matInput placeholder="Rocket type" formCOntrolName="rocket_type">
   </mat-form-field>
+
   <mat-form-field class="example-full-width">
     <input type="text" matInput placeholder="Core serial">
   </mat-form-field>

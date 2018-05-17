@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'capsules-details/search', component: CapsulesDetailsSearchComponent},
   { path: 'capsules-details/:id', component: CapsulesDetailsSingleComponent },
   { path: 'core-details', component: CoreDetailsComponent },
-  { path: 'core-details/:id', component: CoreDetailsSingleComponent },
+  { path: 'core-details/single/:id', component: CoreDetailsSingleComponent },
   { path: 'core-details/search', component: CoreDetailsSearchComponent }
 ];
 
