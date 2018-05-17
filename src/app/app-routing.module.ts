@@ -14,14 +14,20 @@ import {CapsulesDetailsSearchComponent} from './components/capsules-details-sear
 import {CoreDetailsComponent} from './pages/core-details/core-details.component';
 import {CoreDetailsSingleComponent} from './pages/core-details/core-details-single/core-details-single.component';
 import {CoreDetailsSearchComponent} from './components/core-details-search/core-details-search.component';
+
 import {EquipementsComponent} from './pages/equipements/equipements.component';
 import {RocketsComponent} from './pages/equipements/rockets/rockets.component';
 import {LaunchpadsComponent} from './pages/equipements/launchpads/launchpads.component';
 import {CapsulesComponent} from './pages/equipements/capsules/capsules.component';
 
+import {MaterialComponent} from './pages/equipments/material.component';
+import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
+
+
 const routes: Routes = [
   { path: 'home', component: CompanyInfoComponent },
   { path: 'launches', component: LaunchesComponent },
+  { path: 'launches/:id', component: LauncheSingleComponent },
   { path: 'launches/lastest', component: LastestLauncheComponent },
   { path: 'launches/upcoming', component: UpcomingLauncheComponent },
   { path: 'launches/search', component: SearchLaunchComponent },
