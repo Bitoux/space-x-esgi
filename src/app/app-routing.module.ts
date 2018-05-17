@@ -19,8 +19,6 @@ import {EquipementsComponent} from './pages/equipements/equipements.component';
 import {RocketsComponent} from './pages/equipements/rockets/rockets.component';
 import {LaunchpadsComponent} from './pages/equipements/launchpads/launchpads.component';
 import {CapsulesComponent} from './pages/equipements/capsules/capsules.component';
-
-import {MaterialComponent} from './pages/equipments/material.component';
 import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
 
 

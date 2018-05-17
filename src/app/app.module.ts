@@ -53,9 +53,7 @@ import { LauncheSingleComponent } from './pages/launches/launche-single/launche-
     CapsulesDetailsSearchComponent,
     CoreDetailsComponent,
     CoreDetailsSingleComponent,
-    CoreDetailsSearchComponent
     CoreDetailsSearchComponent,
-    MaterialComponent,
     LauncheSingleComponent
   ],
   imports: [
