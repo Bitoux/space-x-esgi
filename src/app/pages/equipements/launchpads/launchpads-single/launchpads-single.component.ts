@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../../../../shared/provider/Backend/api-service.service';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute } from '@angular/router';
+import {RoutingState} from '../../../../shared/provider/route-history.provider';
 
 @Component({
   selector: 'app-launchpads-single',
@@ -10,8 +11,9 @@ import { ActivatedRoute } from "@angular/router";
 export class LaunchpadsSingleComponent implements OnInit {
   id: string;
   launchpad: Launchpads;
+  prevRoute: string;
 
-  constructor(private spaceXAPI: ApiServiceService, private route: ActivatedRoute) { }
+  constructor(private spaceXAPI: ApiServiceService, private route: ActivatedRoute, private routingState: RoutingState) { }
 
   ngOnInit(): void {
     this.route.params.subscribe( params => {
@@ -20,7 +22,7 @@ export class LaunchpadsSingleComponent implements OnInit {
       this.spaceXAPI.getSingleLaunchpads(this.id)
         .subscribe(data => {
           this.launchpad = data;
-          console.log(this.launchpad);
+          this.prevRoute = this.routingState.getPreviousUrl();
         });
     });
   }

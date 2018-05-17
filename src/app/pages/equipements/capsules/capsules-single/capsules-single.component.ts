@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../../../../shared/provider/Backend/api-service.service';
 import { ActivatedRoute } from "@angular/router";
+import {RoutingState} from "../../../../shared/provider/route-history.provider";
 
 @Component({
   selector: 'app-capsules-single',
@@ -10,8 +11,9 @@ import { ActivatedRoute } from "@angular/router";
 export class CapsulesSingleComponent implements OnInit {
   id: string;
   capsule: Capsules;
+  prevRoute: string;
 
-  constructor(private spaceXAPI: ApiServiceService, private route: ActivatedRoute) { }
+  constructor(private spaceXAPI: ApiServiceService, private route: ActivatedRoute, private routingState: RoutingState) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -21,6 +23,8 @@ export class CapsulesSingleComponent implements OnInit {
         .subscribe(data => {
           this.capsule = data;
           console.log(this.capsule);
+          this.prevRoute = this.routingState.getPreviousUrl();
+          console.log(this.prevRoute);
         });
     });
   }
