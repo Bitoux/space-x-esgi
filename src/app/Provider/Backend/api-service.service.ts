@@ -91,6 +91,78 @@ export class ApiServiceService {
     return this.httpClient.get<CoreDetails>(requestEndPoint);
   }
 
+  searchCoreDetailsByFilter(filterOption: CoreDetailsFilter): Observable<CoreDetails[]> {
+    let getParams = this.coreDetailsFilterToGetParam(filterOption);
+    let requestEndPoint = this.baseURL + 'parts/cores?' + getParams;
+    return this.httpClient.get<CoreDetails[]>(requestEndPoint);
+  }
+
+  searchCapsuleDetailsByFilter(filterOption: CapsuleDetailsFilter): Observable<CapsuleDetailsFilter[]> {
+    let getParams = this.capsulesDetailsToGetParam(filterOption);
+    let requestEndPoint = this.baseURL + 'parts/caps?' + getParams;
+    return this.httpClient.get<CapsuleDetailsFilter[]>(requestEndPoint);
+  }
+
+  private capsulesDetailsToGetParam(filterOption: CapsuleDetailsFilter): string{
+    let getParams = '';
+    if(filterOption.capsule_serial !== null){
+      getParams = getParams + 'capsule_serial='+filterOption.capsule_serial;
+    }
+    if(filterOption.capsule_id !== null ){
+      getParams = getParams + '&capsule_id='+filterOption.capsule_id;
+    }
+    if(filterOption.status !== null ){
+      getParams = getParams + '&status='+filterOption.status;
+    }
+    if(filterOption.original_launch !== null ){
+      getParams = getParams + '&original_launch='+filterOption.original_launch;
+    }
+    if(filterOption.missions !== null ){
+      getParams = getParams + '&missions='+filterOption.missions;
+    }
+    if(filterOption.landings !== null ){
+      getParams = getParams + '&landings='+filterOption.landings;
+    }
+    if(filterOption.type !== null ){
+      getParams = getParams + '&type='+filterOption.type;
+    }
+    return getParams;
+  }
+
+  private coreDetailsFilterToGetParam(filterOption: CoreDetailsFilter): string {
+    let getParams = '';
+    if(filterOption.core_serial !== null){
+      getParams = getParams + 'core_serial='+filterOption.core_serial;
+    }
+    if(filterOption.block !== null ){
+      getParams = getParams + '&block='+filterOption.block;
+    }
+    if(filterOption.status !== null ){
+      getParams = getParams + '&status='+filterOption.status;
+    }
+    if(filterOption.original_launch !== null ){
+      getParams = getParams + '&original_launch='+filterOption.original_launch;
+    }
+    if(filterOption.missions !== null ){
+      getParams = getParams + '&missions='+filterOption.missions;
+    }
+    if(filterOption.rtls_attempt !== null ){
+      getParams = getParams + '&rtls_attempt='+filterOption.rtls_attempt;
+    }
+    if(filterOption.rtls_landings !== null ){
+      getParams = getParams + '&rtls_landings='+filterOption.rtls_landings;
+    }
+    if(filterOption.asds_attempt !== null ){
+      getParams = getParams + '&asds_attempt='+filterOption.asds_attempt;
+    }
+    if(filterOption.asds_landings !== null ){
+      getParams = getParams + '&asds_landings='+filterOption.asds_landings;
+    }
+    if(filterOption.water_landing !== null ){
+      getParams = getParams + '&water_landing='+filterOption.water_landing;
+    }
+    return getParams;
+  }
 
   private launchFilterOptionToGetParam(filterOption: LaunchFilter): string {
     let getParams = '';

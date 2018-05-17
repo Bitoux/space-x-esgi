@@ -32,6 +32,8 @@ export class CoreDetailsSearchComponent implements OnInit {
   searchByFilter(formValue): void{
     this.coreDetailFilter = formValue;
     console.log(this.coreDetailFilter);
+    this.spaceXAPI.searchCoreDetailsByFilter(this.coreDetailFilter)
+      .subscribe(data => console.log(data));
   }
 
 }

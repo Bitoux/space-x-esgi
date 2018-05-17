@@ -1,3 +1,24 @@
-<p>
-  capsules-details-search works!
-</p>
+<form [formGroup]="filterForm" (ngSubmit)="searchByFilter(filterForm.value)">
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Capsule serial" formControlName="capsule_serial">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Capsule id" formControlName="capsule_id">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Status" formControlName="status">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Original launch" formControlName="original_launch">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Missions" formControlName="missions">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Landings" formControlName="landings">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput placeholder="Type" formControlName="type">
+  </mat-form-field>
+  <button mat-button class="submit-btn" type="submit">Search</button>
+</form>
