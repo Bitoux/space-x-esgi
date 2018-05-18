@@ -14,7 +14,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatRadioModule} from '@angular/material/radio';
 import {AppComponent} from './app.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {LaunchesComponent} from './pages/launches/launches.component';
 import {LastestLauncheComponent} from './pages/launches/lastest-launche/lastest-launche.component';
@@ -32,11 +32,14 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {RoutingState} from './shared/provider/route-history.provider';
 import {EquipementsModule} from './pages/equipements/equipements.module';
 import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
+import {LauncheSingleComponent} from './pages/launches/launche-single/launche-single.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
-import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
-import { CardEquipementsComponent } from './components/card-equipements/card-equipements.component';
-import {NgxPaginationModule} from "ngx-pagination";
-
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -74,7 +77,14 @@ import {NgxPaginationModule} from "ngx-pagination";
     MatButtonToggleModule,
     EquipementsModule,
     NgHttpLoaderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [RoutingState],
   bootstrap: [AppComponent]
