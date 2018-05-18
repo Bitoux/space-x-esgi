@@ -7,6 +7,7 @@ import { ApiServiceService } from '../../../shared/provider/Backend/api-service.
 })
 export class LastestLauncheComponent implements OnInit {
   launches: Launches[];
+  p: number = 1;
 
   constructor(private spaceXAPI: ApiServiceService) { }
 

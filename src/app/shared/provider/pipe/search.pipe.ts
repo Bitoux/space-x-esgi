@@ -16,6 +16,8 @@ export class FilterPipe implements PipeTransform {
         return it.description.toLowerCase().includes(searchText);
       } else if (it.full_name && it.full_name.toLowerCase().includes(searchText)) {
         return it.full_name.toLowerCase().includes(searchText);
+      } else {
+        return false;
       }
     });
   }

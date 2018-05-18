@@ -1,0 +1,33 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row" style="margin-bottom: 30px;">
+      <div class="col-md-4 offset-4 text-center">
+        <div class="input-group no-border">
+          <input type="text" value="" class="form-control" placeholder="Search..." [(ngModel)]="searchText">
+          <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+            <i class="material-icons">search</i>
+            <div class="ripple-container"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let object of objects | filter : searchText">
+        <div class="card card-profile" style="height: calc(100% - 60px);">
+          <div class="card-avatar">
+            <img class="img" src="assets/img/launchpad.jpg" *ngIf="object.full_name"/>
+            <img class="img" src="assets/img/capsule.png" [ngStyle]="{'opacity': object.active ? 1 : 0.4}" *ngIf="object.type === 'capsule'"/>
+            <img class="img" src="assets/img/rocket.jpg" [ngStyle]="{'opacity': object.active ? 1 : 0.4}" *ngIf="object.type === 'rocket'"/>
+          </div>
+          <div class="card-body">
+            <h4 class="card-title">{{object?.full_name}} {{object?.name}}</h4>
+            <p class="card-description">
+              {{object?.details}} {{object?.description}}
+            </p>
+            <a href class="btn btn-danger btn-round"  [routerLink]="[object.id]">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

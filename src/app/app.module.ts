@@ -22,7 +22,6 @@ import {UpcomingLauncheComponent} from './pages/launches/upcoming-launche/upcomi
 import {SearchLaunchComponent} from './components/search-launch/search-launch.component';
 import {CompanyInfoComponent} from './pages/company-info/company-info.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
-import {NavbarComponent} from './components/navbar/navbar.component';
 import {CapsulesDetailsComponent} from './pages/capsules-details/capsules-details.component';
 import {CapsulesDetailsSingleComponent} from './pages/capsules-details/capsules-details-single/capsules-details-single.component';
 import {CapsulesDetailsSearchComponent} from './components/capsules-details-search/capsules-details-search.component';
@@ -35,6 +34,8 @@ import {EquipementsModule} from './pages/equipements/equipements.module';
 import {NgHttpLoaderModule} from 'ng-http-loader/ng-http-loader.module';
 
 import { LauncheSingleComponent } from './pages/launches/launche-single/launche-single.component';
+import { CardEquipementsComponent } from './components/card-equipements/card-equipements.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 @NgModule({
@@ -48,7 +49,6 @@ import { LauncheSingleComponent } from './pages/launches/launche-single/launche-
     CapsulesDetailsComponent,
     CapsulesDetailsSingleComponent,
     SidebarComponent,
-    NavbarComponent,
     CapsulesDetailsSearchComponent,
     CoreDetailsComponent,
     CoreDetailsSingleComponent,
@@ -73,7 +73,8 @@ import { LauncheSingleComponent } from './pages/launches/launche-single/launche-
     MatRadioModule,
     MatButtonToggleModule,
     EquipementsModule,
-    NgHttpLoaderModule
+    NgHttpLoaderModule,
+    NgxPaginationModule
   ],
   providers: [RoutingState],
   bootstrap: [AppComponent]
