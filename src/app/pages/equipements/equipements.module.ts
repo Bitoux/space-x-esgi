@@ -11,6 +11,7 @@ import {CapsulesSingleComponent} from "./capsules/capsules-single/capsules-singl
 import {LaunchpadsSingleComponent} from "./launchpads/launchpads-single/launchpads-single.component";
 import {FormsModule} from "@angular/forms";
 import {FilterPipe} from "../../shared/provider/pipe/search.pipe";
+import {CardEquipementsComponent} from "../../components/card-equipements/card-equipements.component";
 
 @NgModule({
   imports: [
@@ -27,7 +28,8 @@ import {FilterPipe} from "../../shared/provider/pipe/search.pipe";
     RocketsSingleComponent,
     CapsulesSingleComponent,
     LaunchpadsSingleComponent,
-    FilterPipe
+    FilterPipe,
+    CardEquipementsComponent
   ]
 })
 export class EquipementsModule { }

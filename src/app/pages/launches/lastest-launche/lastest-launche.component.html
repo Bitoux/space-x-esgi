@@ -24,11 +24,11 @@
                                       Launch year
                                   </th>
                                   <th>
-                                      
+
                                   </th>
                               </thead>
                               <tbody>
-                                  <tr *ngFor="let launche of launches">
+                                  <tr *ngFor="let launche of launches | paginate: { itemsPerPage: 10, currentPage: p }">
                                       <td>
                                           {{launche.flight_number}}
                                       </td>
@@ -47,6 +47,7 @@
                                   </tr>
                               </tbody>
                           </table>
+                        <pagination-controls (pageChange)="p = $event"></pagination-controls>
                       </div>
                   </div>
               </div>
